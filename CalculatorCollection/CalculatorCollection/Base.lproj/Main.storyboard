@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalculatorCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-GV-DIw">
+                                <rect key="frame" x="0.0" y="344.5" width="414" height="517.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vdz-GV-DIw" secondAttribute="height" multiplier="4:5" id="UiN-0V-1f5"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="aiq-Ke-uSX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="btn" id="zXo-48-XFC" customClass="CollectionViewCell" customModule="CalculatorCollection" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KSs-y7-ZGe">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dny-AP-Edl" customClass="Button" customModule="CalculatorCollection" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="btnAction:" destination="zXo-48-XFC" eventType="touchUpInside" id="6r4-Tp-Jo3"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dny-AP-Edl" firstAttribute="leading" secondItem="KSs-y7-ZGe" secondAttribute="leading" id="0L6-pU-4nF"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dny-AP-Edl" secondAttribute="trailing" id="T2I-Hb-bVx"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dny-AP-Edl" secondAttribute="bottom" id="YVy-Iz-48q"/>
+                                                <constraint firstItem="Dny-AP-Edl" firstAttribute="top" secondItem="KSs-y7-ZGe" secondAttribute="top" id="fqx-ac-Nuk"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="btn" destination="Dny-AP-Edl" id="7Wp-18-X7G"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTZ-Rq-mYy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="65" translatesAutoresizingMaskIntoConstraints="NO" id="aqP-MY-qbl">
+                                        <rect key="frame" x="0.0" y="150.5" width="414" height="150"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aqP-MY-qbl" firstAttribute="width" secondItem="FTZ-Rq-mYy" secondAttribute="width" id="0gB-8P-HgA"/>
+                                    <constraint firstItem="aqP-MY-qbl" firstAttribute="height" secondItem="FTZ-Rq-mYy" secondAttribute="height" multiplier="1/2" id="LXD-gK-E1l"/>
+                                    <constraint firstAttribute="bottom" secondItem="aqP-MY-qbl" secondAttribute="bottom" id="lVH-N4-9v5"/>
+                                    <constraint firstAttribute="trailing" secondItem="aqP-MY-qbl" secondAttribute="trailing" id="skp-qR-r99"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FTZ-Rq-mYy" secondAttribute="trailing" id="DgJ-tc-zaz"/>
+                            <constraint firstItem="Vdz-GV-DIw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I9G-TB-vmR"/>
+                            <constraint firstItem="FTZ-Rq-mYy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vu9-8g-Yul"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vdz-GV-DIw" secondAttribute="bottom" id="ezy-bh-TIw"/>
+                            <constraint firstItem="Vdz-GV-DIw" firstAttribute="top" secondItem="FTZ-Rq-mYy" secondAttribute="bottom" id="k3s-JI-bfA"/>
+                            <constraint firstItem="Vdz-GV-DIw" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="pGr-wc-3ou"/>
+                            <constraint firstItem="FTZ-Rq-mYy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uaa-zd-uTe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CollectionView" destination="Vdz-GV-DIw" id="xJh-9o-zOC"/>
+                        <outlet property="lblResult" destination="aqP-MY-qbl" id="rDA-Cd-uiq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
